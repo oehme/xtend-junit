@@ -21,6 +21,7 @@ repositories.jcenter()
 
 dependencies {
 	compile 'junit:junit:4.11'
+	compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.7.+'
 	compile 'com.github.oehme.xtend:xtend-contrib:0.5.1'
 	testCompile('org.eclipse.xtend:org.eclipse.xtend.core:2.7.+') {
 		exclude group: 'asm', module: 'asm'
