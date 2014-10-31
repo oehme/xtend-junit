@@ -11,4 +11,4 @@ dependencies {
 
 sourceCompatibility = 1.5
 
-installMainXtendDebugInfo.skip = true
+installMainXtendDebugInfo.enabled = false
