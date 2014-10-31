@@ -21,11 +21,10 @@ repositories.jcenter()
 
 dependencies {
 	compile 'junit:junit:4.11'
-	compile 'org.hamcrest:hamcrest-library:1.3'
-	compile('org.eclipse.xtend:org.eclipse.xtend.core:2.7.+') {
+	compile 'com.github.oehme.xtend:xtend-contrib:0.5.1'
+	testCompile('org.eclipse.xtend:org.eclipse.xtend.core:2.7.+') {
 		exclude group: 'asm', module: 'asm'
 	}
-	compile 'com.github.oehme.xtend:xtend-contrib:0.5.1'
 }
 
 sourceCompatibility = 1.5
