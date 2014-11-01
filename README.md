@@ -35,4 +35,4 @@ This annotation automates common JUnit patterns. It also adds compile-time valid
 
 - you can use ```"Foo" => startsWith("F")```instead of ```assertThat("Foo", startsWith("F"))```
 - ```org.hamcrest.CoreMatchers``` or ```org.hamcrest.Matchers``` is statically imported, depending on which is on the classpath
-- an ErrorCollector is added as an extension field, so you can use softly assert using ```checkThat(expected, Matcher)```)
+- an ErrorCollector is added as an extension field, so you can softly assert using ```checkThat(expected, Matcher)```)
