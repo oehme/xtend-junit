@@ -1,3 +1,5 @@
+package test 
+
 import de.oehme.xtend.junit.JUnit
 import org.junit.experimental.theories.DataPoints
 import org.junit.experimental.theories.Theory

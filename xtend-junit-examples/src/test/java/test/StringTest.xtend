@@ -1,3 +1,5 @@
+package test
+
 import de.oehme.xtend.junit.Hamcrest
 import de.oehme.xtend.junit.JUnit
 
