@@ -36,3 +36,8 @@ This annotation automates common JUnit patterns. It also adds compile-time valid
 - you can use ```"Foo" => startsWith("F")```instead of ```assertThat("Foo", startsWith("F"))```
 - ```org.hamcrest.CoreMatchers``` or ```org.hamcrest.Matchers``` is statically imported, depending on which is on the classpath
 - an ErrorCollector is added as an extension field, so you can softly assert using ```checkThat(expected, Matcher)```)
+
+@AutoSuite
+----------
+
+Collects all tests in a package (and optionally all subpackages) and creates a Suite from them. Especially useful if you want to group your tests using Categories instead of writing @SuiteClasses manually. This is basically like using [ClassPathSuite](http://www.johanneslink.net/projects/cpsuite.jsp), but statically generated, so you will have quick test startup times.
