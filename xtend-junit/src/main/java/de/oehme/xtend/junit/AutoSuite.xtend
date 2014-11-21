@@ -1,5 +1,6 @@
 package de.oehme.xtend.junit
 
+import java.util.regex.Pattern
 import org.eclipse.xtend.lib.macro.AbstractClassProcessor
 import org.eclipse.xtend.lib.macro.Active
 import org.eclipse.xtend.lib.macro.TransformationContext
@@ -41,18 +42,31 @@ class AutoSuiteProcessor extends AbstractClassProcessor {
 			])
 	}
 	
-	//TODO use regex to find actual type names inside the file
 	def Iterable<Type> findTypes(extension TransformationContext context, Path packageFolder, boolean includeSubPackages) {
 		val currentPackage = packageFolder.sourceFolder.relativize(packageFolder).toString.replace("/",".")
 		val packagePrefix = if (currentPackage.isEmpty) "" else currentPackage + "."
 		val types = newArrayList
 		types += packageFolder.children
 			.filter[fileExtension == "xtend" || fileExtension == "java"]
-			.map[findTypeGlobally(packagePrefix + lastSegment.split("\\.").get(0))]
+			.map[containedTypes(context)].flatten
+			.map[findTypeGlobally(packagePrefix + it)]
 			.filterNull
 		if (includeSubPackages) {
 			types += packageFolder.children.filter[isFolder].map[context.findTypes(it, includeSubPackages)].flatten
 		}
 		types
+	}
+	
+	
+	static val TYPE_PATTERN = Pattern.compile(".*(class|interface|enum|annotation)\\s+([^\\s{]+).*")
+	
+	//TODO this approach breaks for nested classes and commented code
+	def containedTypes(Path file, extension TransformationContext context) {
+		val matcher = TYPE_PATTERN.matcher(file.contents)
+		val typeNames = newArrayList
+		while (matcher.find) {
+			typeNames += matcher.group(2)
+		}
+		typeNames
 	}
 }
