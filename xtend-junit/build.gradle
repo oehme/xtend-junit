@@ -8,13 +8,13 @@ buildscript {
 }
 
 plugins {
-  id 'org.xtend.xtend' version '0.3.2'
+  id 'org.xtend.xtend' version '0.3.4'
 }
-apply plugin: 'de.oehme.sobula.maven-release'
+
 apply plugin: 'de.oehme.sobula.bintray-release'
 
 group = 'com.github.oehme.xtend'
-version = '0.0.2'
+version = '0.0.3'
 description = 'Makes using Junit4 even more fun with Xtend'
 
 repositories.jcenter()
