@@ -3,7 +3,7 @@ buildscript {
 		maven { url 'http://dl.bintray.com/oehme/maven/' }
 	}
 	dependencies {
-		classpath 'de.oehme.sobula:sobula:0.0.+'
+		classpath 'com.github.oehme.sobula:sobula:0.0.+'
 	}
 }
 
@@ -11,7 +11,8 @@ plugins {
   id 'org.xtend.xtend' version '0.3.4'
 }
 
-apply plugin: 'de.oehme.sobula.bintray-release'
+apply plugin: 'com.github.oehme.sobula.bintray-release'
+apply plugin: 'com.github.oehme.sobula.stefan'
 
 group = 'com.github.oehme.xtend'
 version = '0.0.3'
