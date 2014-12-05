@@ -7,7 +7,7 @@ Makes JUnit testing even simpler with Xtend. See the [examples](https://github.c
 testCompile 'com.github.oehme.xtend:xtend-junit:0.0.1'
 ```
 
-[![Build Status](https://oehme.ci.cloudbees.com/buildStatus/icon?job=xtend-junit)](https://oehme.ci.cloudbees.com/job/xtend-junit/)
+[![Build Status](https://travis-ci.org/oehme/xtend-junit.svg)](https://travis-ci.org/oehme/xtend-junit)
 
 @Junit
 ------
