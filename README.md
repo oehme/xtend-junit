@@ -4,10 +4,11 @@ xtend-junit
 Makes JUnit testing even simpler with Xtend. See the [examples](https://github.com/oehme/xtend-junit/tree/master/xtend-junit-examples/src/test/java) or read on for more details.
 
 ```groovy
-testCompile 'com.github.oehme.xtend:xtend-junit:0.0.1'
+testCompile 'com.github.oehme.xtend:xtend-junit:$version'
 ```
 
 [![Build Status](https://travis-ci.org/oehme/xtend-junit.svg)](https://travis-ci.org/oehme/xtend-junit)
+[![Download](https://api.bintray.com/packages/oehme/maven/xtend-junit/images/download.svg) ](https://bintray.com/oehme/maven/xtend-junit/_latestVersion)
 
 @Junit
 ------
