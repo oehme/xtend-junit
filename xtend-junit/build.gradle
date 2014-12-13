@@ -1,27 +1,16 @@
-buildscript {
-	repositories {
-		maven { url 'http://dl.bintray.com/oehme/maven/' }
-	}
-	dependencies {
-		classpath 'com.github.oehme.sobula:sobula:0.0.+'
-	}
-}
-
 plugins {
-  id 'org.xtend.xtend' version '0.3.4'
+  id 'org.xtend.xtend' version '0.3.5'
+	id 'com.github.oehme.sobula.bintray-release' version '0.4.1'
+	id 'com.github.oehme.sobula.stefan' version '0.4.1'
 }
-
-apply plugin: 'com.github.oehme.sobula.bintray-release'
-apply plugin: 'com.github.oehme.sobula.stefan'
 
 group = 'com.github.oehme.xtend'
-version = '0.0.3'
 description = 'Makes using Junit4 even more fun with Xtend'
 
-repositories.jcenter()
+repositories.mavenCentral()
 
 dependencies {
-	compile 'junit:junit:4.11'
+	compile 'junit:junit:4.12'
 	compile 'com.github.oehme.xtend:xtend-contrib:0.5.2'
 	testCompile('org.eclipse.xtend:org.eclipse.xtend.core:2.7.+') {
 		exclude group: 'asm', module: 'asm'
