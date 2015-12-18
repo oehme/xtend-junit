@@ -1,7 +1,9 @@
 xtend-junit
 ===========
 
-Makes JUnit testing even simpler with Xtend. See the [examples](https://github.com/oehme/xtend-junit/tree/master/xtend-junit-examples/src/test/java) or read on for more details.
+This project shows how [Xtend](https://xtend-lang.org)'s Active Annotations can be used to enhance tooling for a specific framework. It solves most of the things that I did not like about Junit 4. Most of these issues will be fixed in the new Junit Lambda project, so I won't put much more work into this one.
+
+See the [examples](https://github.com/oehme/xtend-junit/tree/master/xtend-junit-examples/src/test/java) or read on for more details.
 
 ```groovy
 testCompile 'com.github.oehme.xtend:xtend-junit:$version'
